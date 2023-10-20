@@ -21,7 +21,7 @@ def subscribe(request):
     )
 
     subject = "Welcome to Our Newsletter"
-    from_email = "muhammedanshid173@gmail.com"  # Replace with your email
+    from_email = "yourmail@gmail.com"  # Replace with your email
     recipient_list = [email]
 
     # Load your email template
@@ -62,7 +62,7 @@ def send_newsletter(request):
     newsletter.save()
     subscribers = Subscriber.objects.all()
     subject = "Welcome to Our Newsletter"
-    from_email = "muhammedanshid173@gmail.com"
+    from_email = "yourmail@gmail.com"
     recipient_list = [subscriber.email for subscriber in subscribers]
     html_template = get_template('news.html')
 
